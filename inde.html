@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>What is AI?</title>
+  <!-- Custom Styles & favicon -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/manifest.json">
+</head>
+
+<body>
+  <!--perloader-->
+  <div class="preloader">
+    <h2>loading...</h2>
+    <progress class="progress" value="20" max="100"></progress>
+  </div>
+
+  <!--navbar-->
+  <nav>
+    <h1><a href="#">AI</a></h1>
+    <ul>
+      <li><a href="#what_is_ai">What is AI?</a></li>
+      <li><a href="#application">Applications</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!--Main Container-->
+  <div class="container main-container" id="#">
+    <div class="div div1">
+      <div>
+        <h1>Artificial Intelligence</h1>
+        <h4>Best Invention of Humanity</h4><br>
+        <button class="btn" onclick="explore()">Explore 🚀</button>
+      </div>
+    </div>
+    <div class="div div2">
+      <img class="main-img" src="" alt="main-img">
+    </div>
+  </div>
+
+  <!--About Container-->
+  <div class="container about-container" id="what_is_ai">
+    <div class="div div1">
+      <div>
+        <h1>What is AI?</h1><button class="speak" onclick="speak1()">🔊</button>
+      </div>
+      <p class="info"></p>
+    </div>
+    <div class="div div2">
+      <img src="/images/artificial-intelligence-ai.png" alt="AI">
+    </div>
+  </div>
+
+  <!--Applications-->
+  <!--div class="container applications-container" id="application">
+    <div class="application">
+     <ul>
+       <li><a>AI</a>
+       <ul>
+         <li>ML
+         <ul>
+           <li>Self Driving Car</li>
+           <li>Chatbot</li>
+         </ul>
+         </li>
+       </ul>
+       </li>
+     </ul>
+    </div>
+  </div-->
+
+  <!--Machine Learning-->
+  <div class="container ml-container" id="machine_learning">
+    <div class="div div1">
+      <div>
+        <h1>1.Machine Learning ⚙📚</h1><button class="speak" onclick="speak2()">🔊</button>
+      </div>
+      <p class="info"></p>
+    </div>
+    <div class="div div2">
+      <img src="/images/neural_network.gif" alt="ML">
+    </div>
+  </div>
+
+  <!--Self Driving Car-->
+  <div class="container cv-container" id="self_driving_car">
+    <div class="div div2">
+      <img src="/images/car.gif" alt="car">
+    </div>
+    <div class="div div1">
+      <div>
+        <h1>2.Self Driving Car 👀🚗</h1><button class="speak" onclick="speak3()">🔊</button>
+      </div>
+      <p class="info"></p>
+    </div>
+  </div>
+
+  <!--Chatbot-->
+  <div class="container cb-container" id="chatbot">
+    <div class="div div1">
+      <div>
+        <h1>3.Chatbot 🤖</h1><button class="speak" onclick="speak4()">🔊</button>
+      </div>
+      <p class="info"></p>
+    </div>
+    <div class="div div2">
+      <img src="/images/bot.gif" alt="bot">
+    </div>
+  </div>
+
+  <!--footer-->
+  <footer id="feedback">
+    <div class="div div1">
+      <h2>Setting ⚙</h2>
+      <select id="voiceList"></select><br>
+      <span>*recommended to Microsoft Edge for better experience.</span>
+      <button type="submit" class="stop" onclick="stopVoice()">🔇</button>
+    </div>
+    <div class="div div2">
+      <h2>Feedback ♥️</h2>
+      <textarea id="feedback-txt" rows="8" cols="40" placeholder="Feedback here..."></textarea><br>
+      <button class="btn send" onclick="send()">@Send</button>
+    </div>
+  </footer>
+
+  <!--javascript-->
+  <script src="main.js"></script>
+</body>
+
+</html>
