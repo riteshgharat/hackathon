@@ -4,6 +4,10 @@
   font-family: sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
   width: 100%;
@@ -170,39 +174,112 @@ img {
 .applications-container {
   display: flex;
   justify-content: center;
-  color: #fff
+  flex-direction: column;
+  border-bottom: 2px solid #000;
 }
 
-.application {
-  background: #AAABB9;
-  height: 400px;
-  width: 400px;
-  border-radius: 50%;
-}
-
-.application ul li {
-  display: grid;
-  place-items: center;
+/*I have taken help from codepen to make tree diagram*/
+/*tree diagram code by https://codepen.io/philippkuehn/pen/QbrOaN*/
+.tree ul {
+  position: relative;
+  padding: 1em 0;
+  white-space: nowrap;
+  margin: 0 auto;
   text-align: center;
-  border-radius: 50%;
-  padding: 5px;
 }
 
-.application ul li ul li {
-  background: #3D3E54;
-
-  height: 300px;
-  width: 300px;
+.tree ul::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.application ul li ul li ul li {
+.tree li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  cursor: pointer;
+  padding: 1em 0.5em 0 0.5em;
+}
+
+.tree li::before,
+.tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  height: 1em;
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+.tree li:only-child::after,
+.tree li:only-child::before {
+  display: none;
+}
+
+.tree li:only-child {
+  padding-top: 0;
+}
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+
+.tree li:last-child::before {
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 1em;
+}
+
+.tree li a {
+  border: 1px solid #ccc;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  color: #333;
+  position: relative;
+  top: 1px;
+}
+
+.tree li a:hover,
+.tree li a:hover+ul li a {
   background: #000;
-
-  height: 120px;
-  width: 120px;
-  margin: 10px;
+  color: #fff;
+  border: 1px solid #ccc;
 }
 
+.tree li a:hover+ul li::after,
+.tree li a:hover+ul li::before,
+.tree li a:hover+ul::before,
+.tree li a:hover+ul ul::before {
+  border-color: #000;
+}
+
+/*footer css*/
 footer {
   width: 100%;
   height: 200px;
@@ -255,7 +332,8 @@ footer .div2 .send {
   padding: 5px;
 }
 
-@keyframes right {
+/*Slide Animation*/
+@keyframes slideRight {
   0% {
     transform: translateX(-50%);
   }
@@ -265,6 +343,7 @@ footer .div2 .send {
   }
 }
 
+/*Media queries*/
 @media screen and (max-width: 800px) {
   nav ul li:nth-child(1) {
     display: none;
@@ -291,7 +370,8 @@ footer .div2 .send {
     align-items: flex-end;
   }
 
-  .cv-container {
+  .cv-container,
+  .applications-container {
     flex-direction: column;
   }
 
