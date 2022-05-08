@@ -136,7 +136,6 @@ if (synth) {
 
     toSpeak.addEventListener('boundary', function(event) {
       container.innerHTML = addMark(toSpeak.text, event.charIndex);
-      console.log(event.charIndex);
     });
   }
   //stop function for text to speech
@@ -164,7 +163,7 @@ if (synth) {
 else {
   document.querySelectorAll('.speak').forEach(speak => speak.style.display = 'none');
   voiceList.style.display = 'none';
-  //alert("Your browser is not supported for Text to speech api. please try on other browser");
+  alert("Your browser is not supported for Text to speech api. please try on other browser");
 }
 
 
