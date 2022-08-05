@@ -8,9 +8,9 @@
 * Change Text to speech language by scrolling at bottom of webpage.
 
 # About Me
-* Name: Ritesh Jayprakash Gharat
+* Name: Ritesh Gharat
 * Grade: 11th
-* Mobile No: 9511801578
+
 
 ## Thank You :)
 
