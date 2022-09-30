@@ -9,7 +9,6 @@
 
 # About Me
 * Name: Ritesh Gharat
-* Grade: 11th
 
 
 ## Thank You :)
